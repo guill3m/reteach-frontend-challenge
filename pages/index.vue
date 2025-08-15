@@ -15,3 +15,9 @@
   </AwesomeSection>
   <UsersList />
 </template>
+
+<style scoped>
+img {
+  max-height: 300px;
+}
+</style>

@@ -15,28 +15,30 @@ body {
 
 header {
   background-color: #ffe5d9;
-  margin-bottom: 15px;
-
   padding: 10px;
   text-align: center;
+  grid-area: header;
 }
 
 nav {
   background-color: #dbfbdb;
-  margin-bottom: 15px;
   padding: 10px;
+  grid-area: nav;
 }
 
 main {
   background-color: #e2eafc;
-  margin-bottom: 15px;
   padding: 20px;
+  grid-area: main;
 }
 
 section {
   background-color: #c1d3fe;
   padding: 15px;
-  margin-bottom: 15px;
+}
+
+section + section {
+  margin-top: 15px;
 }
 
 article {
@@ -47,11 +49,13 @@ article {
 aside {
   background-color: #fffacd;
   padding: 20px;
+  grid-area: side;
 }
 
 footer {
   background-color: #fbd6d2;
   padding: 10px;
+  grid-area: footer;
 }
 
 .challenge-tasks li::marker {
@@ -63,4 +67,32 @@ footer {
   background: white;
   opacity: 0.01;
   font-size: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+#__nuxt {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    'nav'
+    'main'
+    'side'
+    'footer';
+}
+
+@media (width >= 800px) {
+  #__nuxt {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'header header header'
+      'nav nav nav'
+      'main main side'
+      'footer footer footer';
+  }
 }
