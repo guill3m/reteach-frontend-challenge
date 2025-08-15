@@ -13,7 +13,7 @@
         <h2>{{ userGallery.name }}</h2>
         <div class="gallery">
           <template v-for="img in userGallery.photos" :key="img.id">
-            <img :src="img.picture" :alt="img.title" class="photo" />
+            <img :src="img.picture" :alt="img.title" class="photo" loading="lazy" />
           </template>
         </div>
       </div>
