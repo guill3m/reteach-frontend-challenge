@@ -2,11 +2,11 @@
   <nav>
     Navigation
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/responsiveness">Responsiveness</a></li>
-      <li><a href="/">Home 3</a></li>
-      <li><a href="/">Home 4</a></li>
-      <NuxtLink to="/gallery">Gallery</NuxtLink>
+      <li><NuxtLink to="/">Home</NuxtLink></li>
+      <li><NuxtLink to="/responsiveness">Responsiveness</NuxtLink></li>
+      <li><NuxtLink to="/ssr-vs-spa">SSR vs SPA</NuxtLink></li>
+      <li><NuxtLink to="/">Home 4</NuxtLink></li>
+      <li><NuxtLink to="/gallery">Gallery</NuxtLink></li>
     </ul>
   </nav>
 </template>
